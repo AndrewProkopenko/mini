@@ -12,44 +12,56 @@
 <body>
     
     <div id="top"></div>
-    <!-- modal window start -->
-    <div class="service-modal js-modal">
-        <div class="service-modal-container">                        
-        <div class="service-modal-container_contact">
-            <div class="modal-close">
-                <svg>
-                    <use xlink:href="#close"></use>
-                </svg>
-            </div>
-            <div class="service-modal-container_contact__item">
-                
-                <h5>Связь с нами</h5>
-                <h6>Заполните поля ниже и мы перезвоним  Вам!</h6>
-                <form name="modalForm" > 
+   
+  
+  
+  <!-- Modal -->
+  <div class="service-modal modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header"> 
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"> 
+                <div class="modal-close">
+                    <svg>
+                        <use xlink:href="#close"></use>
+                    </svg>
+                </div>
+            </span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="service-modal-container">
+               
+                <div class="service-modal-container__item">
                     
-                    <input name="input5" type="text" placeholder="Ваш телефон" required> 
-                    <input name="input4" type="text" placeholder="Ваше имя" required>
-                    <div class="btn-cont btn-custom">
-                        <button type="submit">
-                            <span>Перезвоните мне</span>
-                        </button>
-                    </div>
-                </form>
-                <span>Нажимая кнопку "Перезвоните мне" Вы соглашаетесь на обработку данных</span>
+                    <h5>Связь с нами</h5>
+                    <h6>Заполните поля ниже и мы перезвоним  Вам!</h6>
+                    <form name="modalForm" > 
+                        
+                        <input name="input5" type="text" placeholder="Ваш телефон" required> 
+                        <input name="input4" type="text" placeholder="Ваше имя" required>
+                        <div class="btn-cont btn-custom">
+                            <button type="submit">
+                                <span>Перезвоните мне</span>
+                            </button>
+                        </div>
+                    </form>
+                    <span>Нажимая кнопку "Перезвоните мне" Вы соглашаетесь на обработку данных</span>
+                </div>
             </div>
         </div>
-        
-        </div> 
-    </div> 
-    <!-- modal window end -->
-      
+         
+      </div>
+    </div>
+  </div>
     <!-- main -->
     <div class="main-banner">
         <div class="container-fluid p-0">
             <header>
                <div class="container">
                     <div class="d-flex justify-content-between align-items-center">
-                        <div class="col">
+                        <div class="col"> 
                             <div class="main-banner_logo">
                                 <a href="#top">
                                     <svg>
@@ -66,6 +78,7 @@
                                     </a>
                                 </div>
                                 <div class="item-2">
+                                     
                                     <a href="#">
                                         Вход
                                     </a>
@@ -121,10 +134,10 @@
                     </div>
                     <div class="main-banner-content_btn">
                         <div class="d-flex justify-content-center align-items-center">
-                                <div class="js-modal-btn">
-                                    <a href="#">
-                                        Условия конкурса
-                                    </a>
+                                <div class="js-modal-btn"> 
+                                        <button type="button"  data-toggle="modal" data-target="#exampleModal">
+                                            Условия конкурса
+                                        </button> 
                                 </div>
                         </div>
                         <span>
@@ -173,9 +186,10 @@
 
                             <div class="electro-about_item-btn">
                                 <div class="js-modal-btn">
-                                    <a href="#">
+                                    <button type="button"  data-toggle="modal" data-target="#exampleModal">
                                         Регистрация
-                                    </a>
+                                    </button> 
+                                     
                                 </div>
                             </div>
 
@@ -253,9 +267,9 @@
                             </div>
                             <div class="why-block-btn">
                                 <div class="js-modal-btn">
-                                    <a href="#">
+                                    <button type="button"  data-toggle="modal" data-target="#exampleModal">
                                         Участвовать
-                                    </a>
+                                    </button> 
                                 </div>
                             </div>
                     </div>               
@@ -417,6 +431,6 @@
 
     <script src="assets/js/vendor.min.js"></script> 
     <script src="assets/js/script.min.js"></script> 
- 
+  
 </body>
 </html>
