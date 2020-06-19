@@ -2,7 +2,8 @@
 html, body {
   font-family: 'Montserrat' !important;
   font-size: 14px !important;
-  background-color: #fcebfc !important; }
+  background-color: #fcebfc !important;
+  overflow-x: hidden; }
 
 #down {
   -webkit-transform: translateY(-150px);
@@ -85,18 +86,41 @@ textarea:focus {
         -ms-flex-pack: end;
             justify-content: flex-end; }
     .main-banner_reg .item-1 {
-      padding: 8px 30px;
       background: #ff0000;
+      border: 1px solid #ff0000;
       border-radius: 2px;
-      color: #fff;
       margin-right: 10px;
-      font-weight: 800; }
+      font-weight: 800;
+      -webkit-transition: 300ms ease;
+      -o-transition: 300ms ease;
+      transition: 300ms ease; }
+      .main-banner_reg .item-1 a {
+        display: block;
+        padding: 8px 30px;
+        color: #fff; }
+      .main-banner_reg .item-1:hover {
+        background: rgba(0, 0, 0, 0); }
+        .main-banner_reg .item-1:hover a {
+          text-decoration: none; }
     .main-banner_reg .item-2 {
       font-weight: 800;
-      padding: 8px 20px;
       border-radius: 2px;
       border: 1px solid #fff;
-      color: #fff; }
+      -webkit-transition: 300ms ease;
+      -o-transition: 300ms ease;
+      transition: 300ms ease; }
+      .main-banner_reg .item-2 a {
+        display: block;
+        padding: 8px 20px;
+        color: #fff;
+        -webkit-transition: 300ms ease;
+        -o-transition: 300ms ease;
+        transition: 300ms ease; }
+      .main-banner_reg .item-2:hover {
+        background: white; }
+        .main-banner_reg .item-2:hover a {
+          color: #2e2845;
+          text-decoration: none; }
 
 .main-banner-content {
   margin-top: 80px;
@@ -242,6 +266,7 @@ textarea:focus {
   .main-banner-content_btn {
     margin-top: 90px; }
     .main-banner-content_btn .js-modal-btn a {
+      display: block;
       font-size: 20px;
       font-style: italic;
       font-weight: 900;
@@ -699,12 +724,17 @@ textarea:focus {
   font-weight: 900;
   color: #fff; }
 
-.why-block p {
+.why-block .paragraph {
+  display: block;
   margin: 20px 0;
   color: #fff;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400; }
+  .why-block .paragraph ol {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 30px; }
 
 .why-block-btn {
   margin-top: 35px; }
@@ -726,6 +756,47 @@ textarea:focus {
 footer {
   padding: 50px 0; }
 
+@media screen and (min-width: 2000px) {
+  .main-banner {
+    background-image: url(../images/main-large.png) !important;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .three-screen {
+    background-image: url(../images/bg2-large.png) !important;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover; } }
+
+@media screen and (min-width: 1200px) {
+  .cloud-block {
+    position: relative; }
+    .cloud-block::after {
+      content: '';
+      position: absolute;
+      width: 120px;
+      height: 700px;
+      top: 0;
+      left: 0;
+      background-image: url(../images/cloud.png);
+      background-position: left top;
+      background-repeat: no-repeat;
+      background-size: contain; } }
+
+@media screen and (min-width: 1800px) {
+  .cloud-block {
+    position: relative; }
+    .cloud-block::after {
+      content: '';
+      position: absolute;
+      width: 290px;
+      height: 880px;
+      top: 0;
+      left: 0;
+      background-image: url(../images/cloud.png);
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: contain; } }
+
 @media screen and (min-width: 992px) {
   .main-banner {
     background-image: url(../images/main.png);
@@ -735,6 +806,7 @@ footer {
     background: none;
     background-image: url(../images/bg2.png);
     background-repeat: no-repeat;
+    background-size: cover;
     background-position: center top;
     min-height: 2000px;
     height: 100%; } }
@@ -743,7 +815,8 @@ footer {
   .main-banner {
     background: #2e2845; }
     .main-banner-content {
-      margin-top: 20px; }
+      margin-top: 20px;
+      padding-bottom: 30px; }
       .main-banner-content h1 {
         font-size: 30px; }
       .main-banner-content h6 {
@@ -763,6 +836,19 @@ footer {
           margin-bottom: 10px; }
           .main-banner-content_timer span br {
             display: none; }
+  .main-banner-content_timer .body-timer > div .days span, .main-banner-content_timer .body-timer > div .hour span, .main-banner-content_timer .body-timer > div .minute span, .main-banner-content_timer .body-timer > div .second span {
+    width: 45px !important;
+    height: 60px !important;
+    font-size: 45px !important; }
+    .main-banner-content_timer .body-timer > div .days span::after, .main-banner-content_timer .body-timer > div .hour span::after, .main-banner-content_timer .body-timer > div .minute span::after, .main-banner-content_timer .body-timer > div .second span::after {
+      width: 45px !important;
+      height: 30px !important; }
+  .main-banner-content_timer .body-timer > div .days::after, .main-banner-content_timer .body-timer > div .hour::after, .main-banner-content_timer .body-timer > div .minute::after, .main-banner-content_timer .body-timer > div .second::after {
+    bottom: -15px !important;
+    width: 90px !important;
+    font-size: 16px !important; }
+  .main-banner-content_btn {
+    margin-top: 40px !important; }
   header::after {
     display: none; }
   header::before {
@@ -779,12 +865,17 @@ footer {
     font-size: 14px; }
   .electro-about_item-btn {
     margin-top: 30px; }
+    .electro-about_item-btn > div {
+      text-align: center; }
     .electro-about_item-btn a {
       display: inline-block; }
-  .three-screen-heading h3 {
-    font-size: 36px;
-    line-height: 38px;
-    margin-bottom: 20px; }
+  .three-screen-heading {
+    margin-top: 40px; }
+    .three-screen-heading h3 {
+      font-size: 36px;
+      line-height: 38px;
+      margin-bottom: 20px;
+      text-align: center; }
   .three-screen {
     padding-top: 20px; }
   .three-screen_item {
@@ -821,7 +912,7 @@ footer {
     font-size: 25px;
     line-height: 25px;
     text-align: center; }
-  .why-block p {
+  .why-block .paragraph {
     font-size: 14px;
     text-align: center; }
   .why-block-btn .js-modal-btn {
@@ -850,7 +941,9 @@ footer {
       width: 60px !important;
       font-size: 14px !important; }
     .main-banner-content_btn {
-      margin-top: 60px !important; }
+      margin-top: 30px !important; }
+      .main-banner-content_btn span {
+        margin-top: 20px; }
   .electro-about_item h3, .electro-about_item h4, .electro-about_item h5, .electro-about_item h6 {
     text-align: center; }
   .electro-about_item-btn a {
@@ -879,7 +972,7 @@ footer {
     margin-top: 20px; }
     .why-block h3 {
       margin-bottom: 0; }
-    .why-block p {
+    .why-block .paragraph {
       font-size: 14px;
       text-align: center; }
     .why-block-btn a {
@@ -906,7 +999,7 @@ footer {
     opacity: 0; }
   header .main-banner_reg {
     padding-right: 50px; }
-    header .main-banner_reg .item-1 {
+    header .main-banner_reg .item-1 a {
       padding-left: 15px;
       padding-right: 15px; }
     header .main-banner_reg .item-1, header .main-banner_reg .item-2 {
